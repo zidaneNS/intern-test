@@ -1,0 +1,25 @@
+<section class="flex flex-col w-full mt-24 py-4">
+    <div class="flex items-center w-full gap-x-6 px-16">
+        <h3 class="text-amber-600 italic text-3xl font-semibold">Our Menu</h3>
+        <select name="filter" id="filter" class="text-white bg-amber-600 py-2 px-4 rounded-md cursor-pointer">
+            <option value="">Sort by price: low to high</option>
+            <option value="">Sort by price: high to low</option>
+        </select>
+    </div>
+    <div class="flex flex-col gap-y-4 w-full text-white px-16 py-8">
+        <p class="text-sm">Showing 31 results</p>
+        <div class="grid grid-cols-3 gap-x-6 gap-y-4">
+            @for(menu of menuList; track menu.id) {
+                <a href="
+                " class="flex justify-between w-full rounded-md bg-gradient-to-b from-black/20 to-white/5 shadow-md cursor-pointer border border-amber-800 hover:bg-white/10 duration-300 py-2 px-4 items-center">
+                    <div class="flex flex-col gap-y-2">
+                        <p class="text-lg italic">{{ menu.name }}</p>
+                        <p class="text-amber-400">Rp{{ menu.lowerPrice }} {{ menu.upperPrice ? `to Rp${menu.upperPrice}` : '' }}</p>
+                        <button class="py-2 px-4 bg-amber-500 rounded-md cursor-pointer hover:bg-amber-400 duration-300 w-fit">Order</button>
+                    </div>
+                    <div class="w-24 h-24 bg-slate-400 rounded-md"></div>
+                </a>
+            }
+        </div>
+    </div>
+</section>

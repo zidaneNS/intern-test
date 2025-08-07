@@ -26,5 +26,5 @@ export class Nav {
       name: 'Our Story',
       path: '/story'
     },
-  ]
+  ];
 }

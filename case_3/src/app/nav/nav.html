@@ -1,9 +1,9 @@
-<nav class="w-full fixed top-0 left-0 px-6 py-4 shadow-xl bg-white flex justify-between">
+<nav class="w-full fixed top-0 left-0 px-6 py-4 shadow-xl bg-gradient-to-b from-amber-950/40 to-black/30 backdrop-blur-md flex justify-between">
     <!-- Logo -->
-    <div class="flex gap-x-3 items-center">
+    <div class="flex gap-x-3 items-center text-white">
         <span class="w-20 h-20 rounded-lg bg-slate-300"></span>
-        <div class="flex flex-col text-amber-800">
-        <h1 class="text-xl font-bold">Cool Coffee</h1>
+        <div class="flex flex-col">
+        <h1 class="text-xl font-bold text-amber-600">Cool Coffee</h1>
         <p>Ready To Humble Your Day</p>
         </div>
     </div>
@@ -11,9 +11,9 @@
     <!-- navLinks -->
     <div class="flex gap-x-6 items-center">
         @for (navLink of navLinks; track $index) {
-            <a [routerLink]="navLink.path" class="text-amber-900 cursor-pointer hover:text-amber-600 hover:scale-110 duration-300 font-semibold">{{ navLink.name }}</a>
+            <a [routerLink]="navLink.path" class="text-amber-700 cursor-pointer hover:text-amber-600 hover:scale-110 duration-300 font-semibold">{{ navLink.name }}</a>
         }
-        <a href="/order" class="text-amber-900 cursor-pointer hover:text-white hover:scale-110 hover:bg-amber-900 duration-300 font-semibold py-2 px-4 rounded-md border border-amber-900">Order Online</a>
+        <a href="/order" class="text-amber-700 cursor-pointer hover:text-white hover:scale-110 hover:bg-amber-900 duration-300 font-semibold py-2 px-4 rounded-md border border-amber-900">Order Online</a>
         <a href="/cart" class="cursor-pointer hover:scale-115 duration-300">
             <img src="/assets/shopping-cart.svg" alt="shopping cart">
         </a>
