@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+html {
+    font-family: 'Blinker', sans-serif;
+    scroll-behavior: smooth;
+}
+
+@plugin "tailwind-scrollbar";
